@@ -85,7 +85,7 @@ public class Client extends JFrame
                 try 
                 {
                     String name = "Vtb Maze Server RMI";
-                    Registry registry = LocateRegistry.getRegistry();
+                    Registry registry = LocateRegistry.getRegistry(ipText.getText());
                     rmiInf = (MazeInf) registry.lookup(name);
                     statusView.setText(Log.AddLog("rmi registry lookup succeed", statusView.getText()));
                 } 
